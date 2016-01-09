@@ -11,16 +11,16 @@ var $ = require('gulp-load-plugins')();
 var wiredep = require('wiredep').stream;
 var _ = require('lodash');
 
-gulp.task('styles-reload', ['styles'], function() {
+gulp.task('styles-reload', ['styles'], function () {
   return buildStyles()
     .pipe(browserSync.stream());
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', function () {
   return buildStyles();
 });
 
-var buildStyles = function() {
+var buildStyles = function () {
   var sassOptions = {
     style: 'expanded'
   };
@@ -28,10 +28,10 @@ var buildStyles = function() {
   var injectFiles = gulp.src([
     path.join(conf.paths.src, '/app/**/*.scss'),
     path.join('!' + conf.paths.src, '/app/index.scss')
-  ], { read: false });
+  ], {read: false});
 
   var injectOptions = {
-    transform: function(filePath) {
+    transform: function (filePath) {
       filePath = filePath.replace(conf.paths.src + '/app/', '');
       return '@import "' + filePath + '";';
     },
