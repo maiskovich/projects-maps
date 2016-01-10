@@ -107,9 +107,8 @@
       });
       var geoJsonLayer = L.geoJson(data, {
         pointToLayer: function (feature, latlng) {
-            var marker=mapdataStyling.markerStyle(feature.properties.title);
-            var geojsonMarkerOptions=marker;
-          return L.circleMarker(latlng, geojsonMarkerOptions);
+          //Default marker used for clustering, round marker wont show popup information when spiderfy
+          return L.marker(latlng);
         },
         //Adds popup information on each marker
         onEachFeature: function (feature, layer) {
