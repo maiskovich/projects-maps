@@ -2,7 +2,10 @@
 
 Project-Maps is a web app for showing projects in a map: 
 
-It's showing the data from [Donor and Government funded projects in Kenya map 2013 - 2015](https://www.opendata.go.ke/Government-Programs-Financing/Donor-and-Government-funded-projects-map-2013-2015/5mtp-qs2h). The data was download in a CSV file and converted to GeoJSON using [this](http://www.convertcsv.com/csv-to-geojson.htm) tool.
+It's showing the data from [Donor and Government funded projects in Kenya map 2013 - 2015](https://www.opendata.go.ke/Government-Programs-Financing/Donor-and-Government-funded-projects-map-2013-2015/5mtp-qs2h). 
+The data was download in a CSV file and converted to GeoJSON using [this](http://www.convertcsv.com/csv-to-geojson.htm) tool. The projects that were having no information in the field `Location2_Secondary` were not considered.
+When you click over a project you can see the title, description and objective of that project. If the information was not available for a certain project it will show a popup saying NO DATA after clicked.
+The projects with data are represented by an orange marker and the ones without data with a white marker.
 
 There is a second layer showing a choropleth. This data is showing the amount 
 of projects by each Kenyan county. 
