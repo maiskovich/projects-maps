@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">
+  <link rel="stylesheet" href="assets/leaflet/leaflet.css">
   <link rel="stylesheet"
         href="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css"/>
   <link rel="stylesheet"
@@ -16,7 +16,6 @@
   <!-- run `gulp inject` to automatically populate bower styles dependencies -->
   <!-- endbower -->
   <!-- endbuild -->
-
   <!-- build:css({.tmp/serve,src}) styles/app.css -->
   <!-- inject:css -->
   <!-- css files will be automatically insert here -->
@@ -32,7 +31,7 @@
 <div ui-view></div>
 <!-- Improve performance over svg -->
 <script>L_PREFER_CANVAS = true;</script>
-<script src="https://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+<script src="assets/leaflet/leaflet.js"></script>
 <script src="//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js"></script>
 <!-- build:js(src) scripts/vendor.js -->
 <!-- bower:js -->
@@ -49,6 +48,5 @@
 <!-- angular templates will be automatically converted in js and inserted here -->
 <!-- endinject -->
 <!-- endbuild -->
-
 </body>
 </html>
